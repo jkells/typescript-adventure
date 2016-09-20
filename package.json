@@ -1,0 +1,14 @@
+{
+  "name": "typescript-adventure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-typescript": "^2.14.0"
+  },
+  "author": "Jared Kells <jkells@gmail.com>",
+  "license": "MIT"
+}
