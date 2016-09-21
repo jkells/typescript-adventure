@@ -76,8 +76,7 @@ body{
     opacity: 0!important;
 }
 
-.code-editor{
-    width: 500px;
+.code-editor{    
     height: 800px;
     display:inline-block;
     border:1px solid grey
@@ -87,6 +86,37 @@ body{
     padding:30px 80px;
 }
 
+.slide{
+    box-shadow: 4px 4px 2px 4px rgba(0,0,0,0.75);
+}
+
 .slide h1{
     font-size: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.slide h1:after
+{
+    content:' ';
+    display:block;
+    border:2px solid #FFA700;
+}
+
+.slide li{
+    font-size: 60px;
+    line-height: 175%;
+}
+
+.ide{
+    width: $slideWidth;
+    margin: 20px;
+}
+
+.ide .typescript-editor{
+    width: ($slideWidth * .6);
+}
+
+.ide .javascript-editor{
+    width: ($slideWidth * .37);
 }

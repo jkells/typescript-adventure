@@ -29,5 +29,5 @@ let bindKeyboard = () => {
 };
 
 bindKeyboard();
-createMonacoEditor(document.querySelector("#slide-2"));
+createMonacoEditor(document.querySelector("#slide-3"));
 showSlide(slide);

@@ -10,6 +10,7 @@ var createMonacoEditor = function (element: Element) {
                 '}',
                 "x();"
             ].join('\n'),
+            fontSize: 32,
             language: 'typescript'
         });
 
