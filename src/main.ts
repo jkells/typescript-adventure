@@ -29,5 +29,20 @@ let bindKeyboard = () => {
 };
 
 bindKeyboard();
-createMonacoEditor(document.querySelector("#slide-3"));
 showSlide(slide);
+
+
+createMonacoEditor(document.querySelector(".example-1"), `
+// Let's see some examples!
+
+// Type inference
+var user = {
+    name: "Jared Kells",
+    age: 32
+};
+
+user.name.trim();
+user.age.trim();
+
+
+`);

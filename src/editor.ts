@@ -1,19 +1,14 @@
-var createMonacoEditor = function (element: Element) {
+var createMonacoEditor = function (element: Element, code: string) {
     require.config({ paths: { 'vs': '../node_modules/monaco-editor/dev/vs' } });
     require(['vs/editor/editor.main'], function () {
         element.addEventListener("keydown", e => e.stopPropagation());
 
-        var lhs = monaco.editor.create(<HTMLElement>element.querySelector(".typescript-editor"), {
-            value: [
-                'function x() {',
-                '\tconsole.log("Hello world!");',
-                '}',
-                "x();"
-            ].join('\n'),
-            fontSize: 32,
+        var lhs = monaco.editor.create(<HTMLElement>element.querySelector(".typescript-editor"), {            
+            fontSize: 24,
             language: 'typescript'
         });
 
+        lhs.setValue(code);
         var rhs = monaco.editor.create(<HTMLElement>element.querySelector(".javascript-editor"), {
             language: 'javascript'
         });
