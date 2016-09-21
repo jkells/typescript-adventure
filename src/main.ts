@@ -1,20 +1,20 @@
 
 let slide = 10;
 
-let showSlide = (slide: number) =>{
+let showSlide = (slide: number) => {
     var css = "show-slide-" + slide;
     document.getElementById("slide-viewport").className = css;
 
-    if(slide === 10){
+    if (slide === 10) {
         document.getElementById("presentation-title").className = "";
         document.getElementById("contact").className = "";
-    }else{
+    } else {
         document.getElementById("presentation-title").className = "fade-out";
         document.getElementById("contact").className = "fade-out";
     }
 };
 
-let bindKeyboard = () => {    
+let bindKeyboard = () => {
     document.addEventListener("keydown", function (e) {
         if (e.keyCode === 37)
             slide--;
@@ -26,7 +26,7 @@ let bindKeyboard = () => {
         if (slide > 10)
             slide = 1;
 
-        showSlide(slide);        
+        showSlide(slide);
     }, false);
 };
 

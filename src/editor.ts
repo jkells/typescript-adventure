@@ -3,7 +3,7 @@ var createMonacoEditor = function (element: Element, code: string) {
     require(['vs/editor/editor.main'], function () {
         element.addEventListener("keydown", e => e.stopPropagation());
 
-        var lhs = monaco.editor.create(<HTMLElement>element.querySelector(".typescript-editor"), {            
+        var lhs = monaco.editor.create(<HTMLElement>element.querySelector(".typescript-editor"), {
             fontSize: 24,
             language: 'typescript'
         });
