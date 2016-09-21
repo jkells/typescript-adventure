@@ -36,7 +36,7 @@ body{
 @for $i from 1 through 4 {  
   $xposition: ($slideWidth + $horizontalPadding) * ($i - 1);
   $yposition: 0;
-  .slide-#{$i} { 
+  #slide-#{$i} { 
       transform: translate($xposition, $yposition);
    }
 
@@ -48,7 +48,7 @@ body{
 @for $i from 1 through 5 {
   $xposition: ($slideWidth + $horizontalPadding) * 1.5;
   $yposition: ($slideHeight + $verticalPadding) * $i;  
-  .slide-#{$i+4} { 
+  #slide-#{$i+4} { 
       transform: translate($xposition, $yposition);
    }
 
@@ -74,4 +74,19 @@ body{
 .fade-out{
     transition: opacity 0.25s ease-in-out!important;
     opacity: 0!important;
+}
+
+.code-editor{
+    width: 500px;
+    height: 800px;
+    display:inline-block;
+    border:1px solid grey
+}
+
+.slide-content{
+    padding:30px 80px;
+}
+
+.slide h1{
+    font-size: 100px;
 }

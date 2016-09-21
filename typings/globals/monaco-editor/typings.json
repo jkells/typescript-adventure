@@ -1,0 +1,11 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "C:\\Users\\jkells\\Desktop\\typescript-adventure\\node_modules\\monaco-editor\\package.json",
+    "raw": "npm:monaco-editor",
+    "typings": "./monaco.d.ts",
+    "version": "0.6.1",
+    "global": false,
+    "name": "monaco-editor"
+  }
+}

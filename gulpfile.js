@@ -5,26 +5,27 @@ var sass = require('gulp-sass');
 var ts = require('gulp-typescript');
 
 gulp.task('ts', function() {
-    gulp.src('*.ts')
-        .pipe(ts())
+    var tsProject = ts.createProject('tsconfig.json');
+    return tsProject.src()  
+        .pipe(ts(tsProject))
         .pipe(gulp.dest(function(f) {
             return f.base;
-        }))
+        }));    
+        
 });
 
-
 gulp.task('sass', function() {
-    gulp.src('*.scss')
+    gulp.src('src/css/*.scss')
         .pipe(sass())
         .pipe(gulp.dest(function(f) {
             return f.base;
-        }))
+        }));
 });
 
 gulp.task('default', ['sass', 'ts'], function() {
-})
+});
 
 gulp.task('watch', ['sass', 'ts'], function() {
-    gulp.watch('*.scss', ['sass']);
-    gulp.watch('*.ts', ['ts']);
-})
+    gulp.watch('src/css/*.scss', ['sass']);
+    gulp.watch('src/*.ts', ['ts']);
+});

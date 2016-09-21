@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "dependencies": {},
+  "dependencies": {
+    "monaco-editor": "^0.6.1"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",

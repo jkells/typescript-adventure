@@ -1,3 +1,4 @@
+
 let slide = 10;
 
 let showSlide = (slide: number) =>{
@@ -28,4 +29,5 @@ let bindKeyboard = () => {
 };
 
 bindKeyboard();
+createMonacoEditor(document.querySelector("#slide-2"));
 showSlide(slide);

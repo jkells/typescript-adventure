@@ -1,0 +1,7 @@
+// Workspace settings
+{    
+    "files.exclude": {
+        "src/*.js": true,
+        "src/css/*.css": true
+    }
+}
