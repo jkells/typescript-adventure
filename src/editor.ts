@@ -8,7 +8,7 @@ var createMonacoEditor = function (element: Element, code: string) {
             language: 'typescript'
         });
 
-        lhs.setValue(code);
+        lhs.setValue(code.trim());
         var rhs = monaco.editor.create(<HTMLElement>element.querySelector(".javascript-editor"), {
             language: 'javascript'
         });

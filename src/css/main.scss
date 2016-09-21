@@ -71,6 +71,21 @@ body{
     font-size: 250px;
 }
 
+
+#contact{           
+    transition: opacity 2.5s ease-in-out;
+    opacity: 1;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;    
+    border-top: 3px solid #FFA700;
+    color: #fff;
+    font-size: 60px;  
+    margin: 80px;    
+    text-align: right;      
+}
+
 .fade-out{
     transition: opacity 0.25s ease-in-out!important;
     opacity: 0!important;
@@ -120,3 +135,4 @@ body{
 .ide .javascript-editor{
     width: ($slideWidth * .37);
 }
+

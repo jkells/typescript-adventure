@@ -7,8 +7,10 @@ let showSlide = (slide: number) =>{
 
     if(slide === 10){
         document.getElementById("presentation-title").className = "";
+        document.getElementById("contact").className = "";
     }else{
         document.getElementById("presentation-title").className = "fade-out";
+        document.getElementById("contact").className = "fade-out";
     }
 };
 
@@ -43,6 +45,4 @@ var user = {
 
 user.name.trim();
 user.age.trim();
-
-
 `);
