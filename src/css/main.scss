@@ -1,25 +1,23 @@
+
+$colorLight: #fff;
+$colorDark1: #000;
+$colorShadow: rgba(0,0,0,0.75);
+$colorDark2: #294E80;
+$colorHighlight: #FFA700;
+
 $slideWidth: 1400px;
 $slideHeight: 850px;
-$horizontalPadding: 100px;
-$verticalPadding: 100px;
-
+$slideHorizontalPadding: 100px;
+$slideVerticalPadding: 100px;
 
 body{
-    background:#294E80;
+    background: $colorDark2;
     font-family: 'Open Sans', serif;
     width: 100%;
     overflow: hidden;
 }
 
-.slide{
-    position: absolute;        
-    top:0; left:0;    
-    width: $slideWidth;
-    height: $slideHeight;    
-    background: #fff;    
-}
-
-#container { 
+#slide-container { 
   margin: 60px auto 60px auto;  
   width: $slideWidth + 100px;
   height: $slideHeight;            
@@ -34,7 +32,7 @@ body{
 }
 
 @for $i from 1 through 4 {  
-  $xposition: ($slideWidth + $horizontalPadding) * ($i - 1);
+  $xposition: ($slideWidth + $slideHorizontalPadding) * ($i - 1);
   $yposition: 0;
   #slide-#{$i} { 
       transform: translate($xposition, $yposition);
@@ -46,8 +44,8 @@ body{
 }
 
 @for $i from 1 through 5 {
-  $xposition: ($slideWidth + $horizontalPadding) * 1.5;
-  $yposition: ($slideHeight + $verticalPadding) * $i;  
+  $xposition: ($slideWidth + $slideHorizontalPadding) * 1.5;
+  $yposition: ($slideHeight + $slideVerticalPadding) * $i;  
   #slide-#{$i+4} { 
       transform: translate($xposition, $yposition);
    }
@@ -61,13 +59,70 @@ body{
     transform: translate(-600px, -300px) scale3d(0.09, 0.09, 09) ;
 }
 
+.slide{
+    position: absolute;        
+    top:0; left:0;    
+    width: $slideWidth;
+    height: $slideHeight;    
+    background: $colorLight;   
+    box-shadow: 4px 4px 2px 4px $colorShadow;   
+
+    .slide-content{
+        padding:30px 80px;
+
+        h1{
+            font-size: 100px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        h1:after
+        {
+            content:' ';
+            display:block;
+            border:2px solid $colorHighlight;
+        }
+
+        li{
+            font-size: 60px;
+            line-height: 175%;
+        }
+
+        p{
+            font-size: 60px;
+            line-height: 175%;
+        }
+    }
+}
+
+
+.ide{
+    width: $slideWidth;
+    margin: 20px;
+
+    .code-editor{    
+        height: 800px;
+        display:inline-block;
+        border:1px solid grey
+    }
+
+    .typescript-editor{
+        width: ($slideWidth * .6);
+    }
+
+    .javascript-editor{
+        width: ($slideWidth * .37);
+    }
+}
+
+
 #presentation-title{           
     transition: opacity 2.5s ease-in-out;
     opacity: 1;
     position: absolute;
     top: 70px;
     left: 390px;
-    color: #fff;    
+    color: $colorLight;    
     font-size: 250px;
 }
 
@@ -79,8 +134,8 @@ body{
     bottom: 0px;
     left: 0px;
     right: 0px;    
-    border-top: 3px solid #FFA700;
-    color: #fff;
+    border-top: 3px solid $colorHighlight;
+    color: $colorLight;
     font-size: 60px;  
     margin: 80px;    
     text-align: right;      
@@ -90,49 +145,3 @@ body{
     transition: opacity 0.25s ease-in-out!important;
     opacity: 0!important;
 }
-
-.code-editor{    
-    height: 800px;
-    display:inline-block;
-    border:1px solid grey
-}
-
-.slide-content{
-    padding:30px 80px;
-}
-
-.slide{
-    box-shadow: 4px 4px 2px 4px rgba(0,0,0,0.75);
-}
-
-.slide h1{
-    font-size: 100px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.slide h1:after
-{
-    content:' ';
-    display:block;
-    border:2px solid #FFA700;
-}
-
-.slide li{
-    font-size: 60px;
-    line-height: 175%;
-}
-
-.ide{
-    width: $slideWidth;
-    margin: 20px;
-}
-
-.ide .typescript-editor{
-    width: ($slideWidth * .6);
-}
-
-.ide .javascript-editor{
-    width: ($slideWidth * .37);
-}
-
