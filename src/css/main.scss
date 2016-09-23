@@ -96,25 +96,60 @@ body{
 }
 
 
-.ide{
+.ide{         
     width: $slideWidth;
-    margin: 20px;
+    height: $slideHeight;
+    position: relative;
 
-    .code-editor{    
-        height: 800px;
-        display:inline-block;
-        border:1px solid grey
-    }
+    .code-editor{   
+        h3{
+            margin: 0;
+        }     
+        .monaco{
+            border:1px solid grey;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 40px;           
+        } 
+    }  
 
     .typescript-editor{
-        width: ($slideWidth * .6);
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        height: $slideHeight * 0.7;
+        width: $slideWidth * 0.6 - 30px;
     }
 
     .javascript-editor{
-        width: ($slideWidth * .37);
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        height: $slideHeight * 0.7;
+        width: $slideWidth * 0.4 - 30px;
+    }
+
+    .output-heading{
+        position: absolute;        
+        bottom: $slideHeight * 0.3 - 80px;
+        left: 20px;
+    }
+
+    .output{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        height: $slideHeight * 0.3 - 90px;
+        border:1px solid grey;
+        box-sizing: border-box;    
+        font-size: 32px;    
+        padding: 20px
     }
 }
-
 
 #presentation-title{           
     transition: opacity 2.5s ease-in-out;
@@ -144,4 +179,8 @@ body{
 .fade-out{
     transition: opacity 0.25s ease-in-out!important;
     opacity: 0!important;
+}
+
+.clear-fix{
+    float: clear;
 }

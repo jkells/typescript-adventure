@@ -1,5 +1,5 @@
 
-let slide = 10;
+let slide = 3;
 
 let showSlide = (slide: number) => {
     var css = "show-slide-" + slide;
@@ -44,5 +44,7 @@ var user = {
 };
 
 user.name.trim();
-user.age.trim();
+
+console.log("Hello World!");
+console.log({foo: 123});
 `);
