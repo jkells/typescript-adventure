@@ -1,0 +1,15 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "C:\\Users\\jkells\\Desktop\\typescript-adventure\\node_modules\\es6-promise\\package.json",
+    "raw": "npm:es6-promise",
+    "main": "dist/es6-promise.js",
+    "browser": {
+      "vertx": false
+    },
+    "typings": "es6-promise.d.ts",
+    "version": "3.3.1",
+    "global": false,
+    "name": "es6-promise"
+  }
+}

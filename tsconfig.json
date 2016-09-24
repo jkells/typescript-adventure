@@ -3,7 +3,11 @@
     "files": [
         "src/main.ts",
         "src/editor.ts",
+        "src/presentation.ts",
         "src/require.d.ts",
         "typings/index.d.ts"
-    ]
+    ],
+    "compilerOptions": {
+        "module": "amd"
+    }
 }

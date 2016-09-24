@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <div id="contact">
         <div>Jared Kells</div>
         <div><img width="32" height="32" src="twitter.png"> @jkells</div>
@@ -27,7 +26,7 @@
                 <div class="slide-content">
                     <h1>Introduction</h1>
                     <ul>
-                        <li>I'm come from the static language world</li>
+                        <li>I come from the static language world</li>
                         <li>We're being swamped by complexity</li>
                         <li>Do we need a SessionFactoryFactory?</li>
                         <li>JavaScript is like a breath of fresh air</li>
@@ -49,67 +48,103 @@
             </div>
 
             <div id="slide-3" class="slide example-1">
-                <div class="ide">                                       
+                <div class="ide">
                     <div class="code-editor typescript-editor">
-                        <h3>TypeScript</h3>                        
+                        <h3>TypeScript</h3>
                         <div class="monaco"></div>
                     </div>
                     <div class="code-editor javascript-editor">
-                        <h3>JavaScript</h3>                        
+                        <h3>JavaScript</h3>
                         <div class="monaco"></div>
                     </div>
-                    <div class="clear-fix"></div>                                        
-                    <div class="output-heading"><h3>Output</h3></div>
-                    <div class="output"></div>                    
+                    <div class="clear-fix"></div>
+                    <div class="output-heading">
+                        <h3>Output</h3>
+                    </div>
+                    <div class="output"></div>
                 </div>
             </div>
 
             <div id="slide-4" class="slide">
                 <div class="slide-content">
-                    <h1>Slide 4 Title.</h1>
-                    <p>Some body!</p>
+                    <h1>Why use TypeScript?</h1>
+                    <ul>
+                        <li>Building large applications</li>
+                        <li>Static type checking</li>
+                        <li>Refactoring</li>
+                        <li>Self documenting code</li>
+                        <li>Productivity - API discoverability</li>
+                    </ul>
                 </div>
             </div>
             <div id="slide-5" class="slide">
                 <div class="slide-content">
-                    <h1>Slide 5 Title.</h1>
-                    <p>Some body!</p>
+                    <h1>It's just JavaScript</h1>
+                    <ul>
+                        <li>It's a superset of JavaScript</li>
+                        <li>Your existing JavaScript is TypeScript!</li>                        
+                        <li>Definitions for most popular libraries</li>
+                        <li>Type inference gives you a lot of static type checking without adding a single type!</li>                        
+                    </ul>
                 </div>
             </div>
 
-            <div id="slide-6" class="slide">
-                <div class="slide-content">
-                    <h1>Slide 6 Title.</h1>
-                    <p>Some body!</p>
+            <div id="slide-6" class="slide example-2">
+                <div class="ide">
+                    <div class="code-editor typescript-editor">
+                        <h3>TypeScript</h3>
+                        <div class="monaco"></div>
+                    </div>
+                    <div class="code-editor javascript-editor">
+                        <h3>JavaScript</h3>
+                        <div class="monaco"></div>
+                    </div>
+                    <div class="clear-fix"></div>
+                    <div class="output-heading">
+                        <h3>Output</h3>
+                    </div>
+                    <div class="output"></div>
                 </div>
             </div>
 
             <div id="slide-7" class="slide">
                 <div class="slide-content">
-                    <h1>Slide 7 Title.</h1>
-                    <p>Some body!</p>
+                    <h1>Other features</h1>
+                    <ul>
+                        <li>'let' keyword</li>
+                        <li>'async' / 'await'</li>
+                        <li>() => arrow functions</li>
+                        <li>Modules / Classes / Interfaces</li>                        
+                        <li>Strict null checking!</li>
+                    </ul>
                 </div>
             </div>
 
             <div id="slide-8" class="slide">
                 <div class="slide-content">
-                    <h1>Slide 8 Title.</h1>
-                    <p>Some body!</p>
+                    <h1>Alternatives / Issues</h1>
+                    <ul>
+                        <li>Elm, CoffeeScript</li>
+                        <li>Babel / Flow</li>
+                        <li>Issues: immutable.js, BlueBird.promisifyAll</li>
+                        <li>Not worth it for small pages</li>                        
+                    </ul>                    
                 </div>
             </div>
 
             <div id="slide-9" class="slide">
                 <div class="slide-content">
-                    <h1>Slide 9 Title.</h1>
-                    <p>Some body!</p>
+                    <h1>Find out more?</h1>
+                    <ul>
+                        <p><em>npm install -g typescript</em></p>
+                        <p><a href="http://www.typescriptlang.org/">http://www.typescriptlang.org/</a></p>
+                        <p>Open Source, Any browser, Any OS</p>                                                
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <script type=text/javascript src="../node_modules/monaco-editor/dev/vs/loader.js"></script>
-    <script type="text/javascript" src="../node_modules/monaco-editor/dev/vs/language/typescript/lib/typescriptServices.js"></script>
-    <script src="editor.js"></script>
+    <script src="../node_modules/requirejs/require.js"></script>
     <script src="main.js"></script>
 </body>
-
 </html>
