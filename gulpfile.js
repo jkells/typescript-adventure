@@ -28,8 +28,8 @@ gulp.task('webserver', function() {
     .pipe(webserver({
       host:             "localhost",
       port:             8080,
-      livereload:       true,
-      directoryListing: false
+      livereload:       false,
+      directoryListing: true
     }));
 });
 
