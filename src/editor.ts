@@ -55,7 +55,12 @@ export function createMonacoEditor(element: Element, code: string) {
             }
         };
 
-        eval(js.outputText);
+        outputElement.innerText = "";
+        try{
+            eval(js.outputText);
+        }catch(e){
+            output += e;
+        }
         window.console = oldConsole;
         outputElement.innerText = output;
     }
