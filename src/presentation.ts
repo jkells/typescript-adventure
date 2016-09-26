@@ -35,19 +35,11 @@ let example1 = () => {
     return Editor.createMonacoEditor(document.querySelector(".example-1"), `
 // Let's see an example!
 
-class Greeter{
-    constructor(private name: string) {}
-
-    public greet(){
-        console.log("Hello " + this.name);
-    }
+function greet(user){
+    console.log("Hello " + user.trim());
 }
 
-let greeter1 = new Greeter("Jared");
-greeter1.greet();
-
-let greeter2 = new Greeter({foo: 1234});
-greeter2.greet();
+greet("Ada");
 `);
 
 }
@@ -72,11 +64,11 @@ var customers=[
         name: "Ada Kells",
         invoices: [
             {
-                date: moment("20160924"),
+                date: moment("20150924"),
                 value: 600
             },
             {
-                date: moment("20160927"),
+                date: moment("20150927"),
                 value: 50
             }
         ]
