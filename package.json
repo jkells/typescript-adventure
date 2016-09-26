@@ -5,6 +5,9 @@
   "main": "main.js",
   "dependencies": {
     "bluebird": "^3.4.6",
+    "es6-promise": "^3.3.1",
+    "lodash": "^4.16.2",
+    "moment": "^2.15.1",
     "monaco-editor": "^0.6.1",
     "requirejs": "^2.3.2"
   },
